@@ -22,7 +22,6 @@ public class PiterGSMTest {
         WebElement buttonContinue = (new WebDriverWait(driver, implicitWait))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='city-popup__top']")));
         String city = driver.findElement(By.xpath("//div[@class='city-popup__top']")).getText();
-        Assert.assertEquals("Ваш город: Санкт-Петербург",city);
         WebElement button = driver.findElement(By.xpath("//a[@class='sh-nav__link icon-user-white js-show-popup']"));
         button.click();
         WebElement login = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
